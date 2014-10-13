@@ -10,5 +10,5 @@ module.exports = function (settings) {
     return function (content, cb) {
 
         return cb(null, marked(content));
-    }
+    };
 };
