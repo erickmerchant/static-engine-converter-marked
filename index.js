@@ -7,8 +7,10 @@ module.exports = function (settings) {
         marked.setOptions(settings);
     }
 
-    return function (content, cb) {
+    return function (file, page, next) {
 
-        return cb(null, marked(content));
+        page.content = marked(page.content);
+
+        return next(file, page);
     };
 };
