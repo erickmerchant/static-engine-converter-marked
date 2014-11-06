@@ -1,11 +1,11 @@
 {
   "name": "static-engine-converter-marked",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "A converter for static-engine-content.",
   "main": "index.js",
   "repository": "erickmerchant/static-engine-converter-marked",
   "keywords": [
-      "static-engine"
+    "static-engine"
   ],
   "author": "Erick Merchant <erickmerchant@gmail.com>",
   "license": "MIT",
