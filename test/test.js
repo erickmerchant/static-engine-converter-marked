@@ -6,7 +6,7 @@ describe('plugin', function(){
 
     it('should process content as markdown using marked', function(done){
 
-        converter('test.txt', {content: "#A test\ntesting [test](test.com) *test*"}, function(file, page, next){
+        converter({file: 'test.txt', content: "#A test\ntesting [test](test.com) *test*"}).then(function(page){
 
             assert.deepEqual(page.content, marked("#A test\ntesting [test](test.com) *test*"));
 

@@ -1,4 +1,5 @@
 var marked = require('marked');
+var Promise = require('es6-promise').Promise;
 
 module.exports = function (settings) {
 
@@ -7,10 +8,13 @@ module.exports = function (settings) {
         marked.setOptions(settings);
     }
 
-    return function (file, page, next) {
+    return function (page) {
 
-        page.content = marked(page.content);
+        return new Promise(function(resolve, reject){
 
-        return next(file, page);
+            page.content = marked(page.content);
+            
+            resolve(page);
+        });
     };
 };
