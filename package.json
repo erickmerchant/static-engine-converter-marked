@@ -15,7 +15,7 @@
   "homepage": "https://github.com/erickmerchant/static-engine-converter-marked",
   "dependencies": {
     "es6-promise": "^2.0.0",
-    "marked": "^0.3.2"
+    "marked": "^0.3.3"
   },
   "peerDependencies": {
     "static-engine-content": "^3.0.0"
