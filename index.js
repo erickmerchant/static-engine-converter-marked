@@ -7,10 +7,13 @@ module.exports = function (settings) {
         marked.setOptions(settings);
     }
 
-    return function (page, done) {
+    return function (pages, done) {
 
-        page.content = marked(page.content);
+        pages.forEach(function(page) {
 
-        done(null, page);
+            page.content = marked(page.content);
+        });
+
+        done(null, pages);
     };
 };
