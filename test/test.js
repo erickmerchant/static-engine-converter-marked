@@ -1,6 +1,6 @@
 var converter = require('../index.js')();
 var marked = require('marked');
-var assert = require('chai').assert;
+var assert = require('assert');
 
 describe('plugin', function(){
 
