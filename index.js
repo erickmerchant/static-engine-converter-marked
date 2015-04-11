@@ -1,19 +1,15 @@
-var marked = require('marked');
+var marked = require('marked')
 
 module.exports = function (settings) {
+  if (settings) {
+    marked.setOptions(settings)
+  }
 
-    if (settings) {
+  return function (pages, done) {
+    pages.forEach(function (page) {
+      page.content = marked(page.content)
+    })
 
-        marked.setOptions(settings);
-    }
-
-    return function (pages, done) {
-
-        pages.forEach(function(page) {
-
-            page.content = marked(page.content);
-        });
-
-        done(null, pages);
-    };
-};
+    done(null, pages)
+  }
+}
