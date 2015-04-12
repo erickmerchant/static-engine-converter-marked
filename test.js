@@ -1,4 +1,4 @@
-var converter = require('../index.js')()
+var converter = require('./index.js')()
 var marked = require('marked')
 var assert = require('assert')
 var describe = require('mocha').describe
