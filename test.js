@@ -10,10 +10,7 @@ describe('plugin', function () {
       file: 'test.txt',
       content: '#A test\ntesting [test](test.com) *test*'
     }], function (err, pages) {
-      if (err) {
-        throw err
-      }
-
+      assert.equal(null, err)
       assert.deepEqual(pages[0].content, marked('#A test\ntesting [test](test.com) *test*'))
 
       done()

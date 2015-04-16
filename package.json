@@ -17,10 +17,12 @@
     "marked": "^0.3.3"
   },
   "devDependencies": {
+    "istanbul": "^0.3.13",
     "mocha": "^2.0.0",
     "standard": "^3.5.0"
   },
   "scripts": {
-    "test": "standard && mocha"
+    "test": "standard && mocha",
+    "cover": "istanbul cover node_modules/.bin/_mocha"
   }
 }
