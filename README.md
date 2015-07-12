@@ -5,19 +5,16 @@
 This is a plugin for [static-engine](https://github.com/erickmerchant/static-engine). Traverses every object in the array and converts the __content__ with marked.
 
 ```javascript
-
-var engine = require('static-engine');
-var marked = require('static-engine-converter-marked');
-var pluginA = require('plugin-a');
+var engine = require('static-engine')
+var marked = require('static-engine-converter-marked')
+var pluginA = require('plugin-a')
 
 engine([
-    pluginA,
-    marked({
-        highlight: function(code) {
-
-            return hljs.highlightAuto(code).value;
-        }
-    })
-]);
-
+  pluginA,
+  marked({
+    highlight: function (code) {
+      return hljs.highlightAuto(code).value
+    }
+  })
+])
 ```
