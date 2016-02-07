@@ -1,6 +1,6 @@
 {
   "name": "static-engine-converter-marked",
-  "version": "5.11.0",
+  "version": "5.11.1",
   "description": "Plugin for static-engine. Processes all content properties of objects in the collection through marked.",
   "main": "index.js",
   "repository": "erickmerchant/static-engine-converter-marked",
