@@ -1,8 +1,8 @@
 var converter = require('./index.js')()
 var marked = require('marked')
-var tap = require('tap')
+var test = require('tape')
 
-tap.test('should process content as markdown using marked', function (t) {
+test('should process content as markdown using marked', function (t) {
   converter([{
     file: 'test.txt',
     content: '#A test\ntesting [test](test.com) *test*'
